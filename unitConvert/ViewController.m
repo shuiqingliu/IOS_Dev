@@ -9,10 +9,23 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *inputField;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentController;
+
+@property (weak, nonatomic) IBOutlet UILabel *outField;
 
 @end
 
+
 @implementation ViewController
+
+- (IBAction)updateButton:(id)sender {
+    NSMutableString *buf = [NSMutableString new];
+    
+    [buf appendString: @"Clicked"];
+    self.outField.text = buf;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
