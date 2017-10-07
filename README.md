@@ -1,6 +1,6 @@
 # IOS_Dev
 
-To Learn IOS Development,this project start by the coursera of `Foundations of Objective-C App Development`[UCI](https://www.coursera.org/learn/objective-c/home/welcome). I will record my week's assignments in there because if you want to submit you should buy the feature. So I commit github LOL.
+To Learn IOS Development,this project start by the coursera of `Foundations of Objective-C App Development`[UCI](https://www.coursera.org/learn/objective-c/home/welcome). I will record my week's assignments in here because if you want to submit you should buy the feature. So I commit github LOL.
 
 # Demo List
 
