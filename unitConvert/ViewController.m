@@ -8,6 +8,20 @@
 
 #import "ViewController.h"
 
+double convertOneToTwo(double oneToTwo){
+    double unitOneTounitTwo = 10* oneToTwo + 2;
+    return unitOneTounitTwo;
+}
+
+double convertOneToThree(double oneToThree){
+    double unitOneToThree = 10* oneToThree + 3;
+    return unitOneToThree;
+}
+
+double convertOneToFour(double oneToFour){
+    double unitOneToFour = 10* oneToFour + 4;
+    return unitOneToFour;
+}
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 
@@ -23,7 +37,20 @@
 - (IBAction)updateButton:(id)sender {
     NSMutableString *buf = [NSMutableString new];
     
-    [buf appendString: @"Clicked"];
+    double userInputField = [self.inputField.text doubleValue];
+    
+    if (self.segmentController.selectedSegmentIndex == 0) {
+        double unitOneTounitTwo = convertOneToTwo(userInputField);
+        [buf appendString: [@(unitOneTounitTwo) stringValue]];
+    }
+    else if (self.segmentController.selectedSegmentIndex == 1){
+        double unitOnetoUnitThree = convertOneToThree(userInputField);
+        [buf appendString: [@(unitOnetoUnitThree) stringValue]];
+    }
+    else{
+        double unitOnetoUnitFour = convertOneToFour(userInputField);
+        [buf appendString: [@(unitOnetoUnitFour) stringValue]];
+    }
     self.outField.text = buf;
 }
 

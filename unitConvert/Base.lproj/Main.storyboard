@@ -27,16 +27,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TCv-Wa-8I1">
-                                <rect key="frame" x="0.0" y="276" width="414" height="29"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bQZ-Xp-Yul" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="0.0" y="188" width="308" height="30"/>
+                                <rect key="frame" x="0.0" y="188" width="281" height="30"/>
                                 <color key="textColor" red="0.018645260483026505" green="0.47766226530075073" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -44,10 +36,10 @@
                                     <action selector="inputFiled:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="xK7-aK-HwM"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-PZ-gjV">
-                                <rect key="frame" x="316" y="197" width="98" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in &lt;unit one&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-PZ-gjV">
+                                <rect key="frame" x="289" y="197" width="125" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="98" id="S7z-OU-mca"/>
+                                    <constraint firstAttribute="width" constant="125" id="S7z-OU-mca"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -60,6 +52,14 @@
                                     <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kk3-ku-pc0"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TCv-Wa-8I1">
+                                <rect key="frame" x="0.0" y="276" width="414" height="29"/>
+                                <segments>
+                                    <segment title="unit two"/>
+                                    <segment title="unit three"/>
+                                    <segment title="unit four"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
