@@ -25,6 +25,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cZ-7K-Ys9"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input amount of US dollar" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hRQ-qQ-DBA">
                                 <rect key="frame" x="71" y="244" width="233" height="30"/>
@@ -98,6 +101,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="convertButton" destination="obb-ru-nD5" id="F9e-sp-cmS"/>
+                        <outlet property="currencyEUR" destination="pmF-tL-ojV" id="Hvw-dx-Mdk"/>
+                        <outlet property="currencyGBP" destination="BBr-gb-Xmt" id="VM6-Md-iKU"/>
+                        <outlet property="currencyJPY" destination="pVZ-dx-1iA" id="hG4-DJ-jLu"/>
+                        <outlet property="inputField" destination="hRQ-qQ-DBA" id="dLn-eR-hk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
