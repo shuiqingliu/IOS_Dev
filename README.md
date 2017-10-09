@@ -7,6 +7,7 @@ To Learn IOS Development,this project start by the coursera of `Foundations of O
 - [x] HelloWorld (The First App)
 - [x] CommandTool(Try to build commandTool for Mac OSX)
 - [x] UnitConvert(functioin def,variable def,base UIKIT use) 
+- [x] CurrencyConvert（Use CurrencyRequest Lib convert currency） 
 
 
 # Keep move everyday.
