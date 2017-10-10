@@ -37,7 +37,7 @@
     double jpyCurrency = inputValue * currencies.JPY;
     double gbpCurrency = inputValue * currencies.GBP;
     
-    //double convert to string
+    //create new NSString Object
     NSString *eurValue = [NSString stringWithFormat:@"%.2f",eurCurrency];
     NSString *jpyValue = [NSString stringWithFormat:@"%.2f",jpyCurrency];
     NSString *gbpValue = [NSString stringWithFormat:@"%.2f",gbpCurrency];
