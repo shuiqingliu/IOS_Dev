@@ -7,16 +7,79 @@
 //
 
 #import "ViewController.h"
+#import "AlterViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *tapButton1;
+@property (weak, nonatomic) IBOutlet UILabel *helloLable;
+//custom button declare
+@property (strong, nonatomic) UIButton *tapButton2;
 
 @end
 
 @implementation ViewController
 
+
+//set UILable can display mutil lines
+- (void) setHelloLable:(UILabel *)helloLable{
+    NSString *screenSize = [NSString stringWithFormat:@"%f",[UIScreen mainScreen].bounds.size.width];
+    NSLog(@"%@", screenSize);
+    helloLable.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width;
+    helloLable.numberOfLines = 0;
+}
+//set border width and corner radius
+//- (void) setTapButton1:(UIButton *)tapButton1{
+//    tapButton1.layer.borderWidth = 1;
+//    tapButton1.layer.cornerRadius = 5;
+//}
+
+//- (void) setTapButton2:(UIButton *)tapButton2{
+//    tapButton2.layer.borderWidth = 1;
+//    tapButton2
+//    //self.tapButton2.currentImage.images = [UIImage imageNamed:@"heart_face"];
+//}
+
+- (IBAction)clickMe:(id)sender {
+    //set Lable title
+    NSString *clickAgain = [NSString stringWithFormat:@"再点一次!"];
+    [self.tapButton1 setTitle:clickAgain forState:(UIControlStateNormal)];
+    printf("ClickCompleted");
+    
+
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //get screen width and height
+    CGFloat width = [UIScreen mainScreen].bounds.size.width/2;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height/2;
+    // invoke UIColorFromRGB(defined in .h file ) method to transform hex color to UIColor
+    self.view.backgroundColor = UIColorFromRGB(0xe3f2fd);
+    //set button size
+    self.tapButton2 = [[UIButton alloc]initWithFrame:CGRectMake(120, 120, 60, 40)];
+    //set button postion
+    self.tapButton2.center = CGPointMake(width, height-5);
+    self.tapButton2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    //set button background image
+    [self.tapButton2 setBackgroundImage:[UIImage imageNamed:@"hug_face"] forState:(UIControlStateNormal)];
+    //define button click selector
+    [self.tapButton2 addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    //add button to subView
+    [self.view addSubview:_tapButton2];
+}
+
+//declare button selector
+- (void)buttonClick{
+    //creat instance alter view controller
+    AlterViewController *alter = [AlterViewController new];
+    //when button clicked that set background image
+    [self.tapButton2 setBackgroundImage:[UIImage imageNamed:@"heart_face"] forState:(UIControlStateNormal)];
+    //set presentation modal is Over Current context
+    alter.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    //add new view
+    [self presentViewController:alter animated:YES  completion:nil];
 }
 
 

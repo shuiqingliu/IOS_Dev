@@ -13,6 +13,7 @@
 		8319BCB51F90ED6800735DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8319BCB41F90ED6800735DD9 /* Assets.xcassets */; };
 		8319BCB81F90ED6800735DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8319BCB61F90ED6800735DD9 /* LaunchScreen.storyboard */; };
 		8319BCBB1F90ED6800735DD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8319BCBA1F90ED6800735DD9 /* main.m */; };
+		83BC16701F937E0900199C56 /* AllterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BC166F1F937E0900199C56 /* AllterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8319BCB71F90ED6800735DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8319BCB91F90ED6800735DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8319BCBA1F90ED6800735DD9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83BC166F1F937E0900199C56 /* AllterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllterViewController.m; sourceTree = "<group>"; };
+		83BC16711F937E2A00199C56 /* AlterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlterViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		8319BCAA1F90ED6800735DD9 /* Assignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				83BC16711F937E2A00199C56 /* AlterViewController.h */,
+				83BC166F1F937E0900199C56 /* AllterViewController.m */,
 				8319BCAB1F90ED6800735DD9 /* AppDelegate.h */,
 				8319BCAC1F90ED6800735DD9 /* AppDelegate.m */,
 				8319BCAE1F90ED6800735DD9 /* ViewController.h */,
@@ -142,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BC16701F937E0900199C56 /* AllterViewController.m in Sources */,
 				8319BCB01F90ED6800735DD9 /* ViewController.m in Sources */,
 				8319BCBB1F90ED6800735DD9 /* main.m in Sources */,
 				8319BCAD1F90ED6800735DD9 /* AppDelegate.m in Sources */,
