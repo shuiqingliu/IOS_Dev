@@ -17,14 +17,22 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    //get screen width and height
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    NSLog(@"screenWidth:%0.2f,screenHeight:%0.2f",screenWidth,screenHeight);
     self.view.backgroundColor = [UIColor clearColor];
-    UIView *alterView = [UIView new];
-    alterView.frame = CGRectMake(15, [UIScreen mainScreen].bounds.size.height - 175, screenWidth - 30, 160);
+    //creat a instance of UIView
+    UIView *alterView = [[UIView alloc]init];
+    //set UIView position and size
+    alterView.frame = CGRectMake(15, screenHeight - 175, screenWidth - 30, 160);
+    NSLog(@"x:%d,y:%f,width:%f,height:%d",15,screenHeight -175,screenWidth - 30,160);
+    //set UIView background color and corner radius
     alterView.backgroundColor = [UIColor whiteColor];
     alterView.layer.cornerRadius = 5;
+    //add view to superview which is its new superview
     [self.view addSubview:alterView];
-    
+    // add gesture recongnizer to current superview
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissVC:)];
     [self.view addGestureRecognizer:tap];
     
