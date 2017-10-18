@@ -8,6 +8,9 @@ To Learn IOS Development,this project start by the coursera of `Foundations of O
 - [x] CommandTool(Try to build commandTool for Mac OSX)
 - [x] UnitConvert(functioin def,variable def,base UIKIT use) 
 - [x] CurrencyConvert（Use CurrencyRequest Lib convert currency） 
+- [x] CalculateDistance (Use DGDistanceRequest lib to calculate the distance between the two place s)  
+- [x] Assignment (try to use base UIKit,customize ViewController )
+- [x] OC-study (base grammar practise of Objective-C)  
 
 
 # Keep move everyday.
