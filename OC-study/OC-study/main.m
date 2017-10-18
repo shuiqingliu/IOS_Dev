@@ -38,6 +38,14 @@ void currentTime(long *second,struct time_r *tm){
     tm -> tm_mday = currentDay;
 }
 
+void hostName(){
+    NSHost *host = [NSHost currentHost];
+    NSString *hostName = [NSString alloc];
+    hostName = [host localizedName];
+    NSLog(@"The host name is %@",hostName);
+    
+}
+
 int main(int argc, const char * argv[]) {
     long secondsSince1970 = time(NULL);
     printf("It has been %ld seconds since 1970\n",secondsSince1970);
@@ -45,6 +53,7 @@ int main(int argc, const char * argv[]) {
     struct time_r now;
     currentTime(&secondsSince1970, &now);
     printf("The time is %d-%d-%d\n",now.tm_mon,now.tm_mday,now.tm_year);
-
+    //print host name
+    hostName();
     return 0;
 }
