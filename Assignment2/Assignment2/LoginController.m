@@ -7,6 +7,7 @@
 //
 
 #import "LoginController.h"
+#import "ViewController.h"
 
 @interface LoginController ()
 @property (strong, nonatomic) IBOutlet UIImageView *headImage;
@@ -32,9 +33,25 @@
     imageView.layer.masksToBounds = YES;
     imageView.layer.borderWidth = 2.0f;
     imageView.layer.borderColor = [UIColor whiteColor].CGColor;
-    imageView.layer.
 }
 
+//listen touch event,close keyboard when click area outof textField
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (IBAction)loginBtnTap:(id)sender {
+    // TODO: login indentifier
+    
+    //get StoryBoard
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //get target ViewController
+    ViewController *vc = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"main"];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:nil];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

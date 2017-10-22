@@ -16,6 +16,8 @@
 		8347DED41F9B484E00860C64 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8347DED21F9B484E00860C64 /* LoginController.m */; };
 		8347DED51F9B484E00860C64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8347DED31F9B484E00860C64 /* LoginController.xib */; };
 		83722EA91F9B88BF00EFFE6A /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 83722EA81F9B88BF00EFFE6A /* apple.png */; };
+		838A706E1F9CBB47009CD011 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 838A706D1F9CBB47009CD011 /* LaunchImage.png */; };
+		838A70721F9CC5BA009CD011 /* sign.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838A70711F9CC5BA009CD011 /* sign.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		8347DED21F9B484E00860C64 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		8347DED31F9B484E00860C64 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		83722EA81F9B88BF00EFFE6A /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		838A706D1F9CBB47009CD011 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		838A70711F9CC5BA009CD011 /* sign.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sign.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,7 @@
 		8347DEAB1F9B44E600860C64 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
-				83722EA81F9B88BF00EFFE6A /* apple.png */,
+				838A706C1F9CB7C4009CD011 /* image */,
 				8347DEAC1F9B44E600860C64 /* AppDelegate.h */,
 				8347DEAD1F9B44E600860C64 /* AppDelegate.m */,
 				8347DEAF1F9B44E600860C64 /* ViewController.h */,
@@ -80,6 +84,16 @@
 				8347DED31F9B484E00860C64 /* LoginController.xib */,
 			);
 			path = Assignment2;
+			sourceTree = "<group>";
+		};
+		838A706C1F9CB7C4009CD011 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				838A70711F9CC5BA009CD011 /* sign.jpg */,
+				838A706D1F9CBB47009CD011 /* LaunchImage.png */,
+				83722EA81F9B88BF00EFFE6A /* apple.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838A70721F9CC5BA009CD011 /* sign.jpg in Resources */,
+				838A706E1F9CBB47009CD011 /* LaunchImage.png in Resources */,
 				8347DEB91F9B44E600860C64 /* LaunchScreen.storyboard in Resources */,
 				8347DED51F9B484E00860C64 /* LoginController.xib in Resources */,
 				8347DEB61F9B44E600860C64 /* Assets.xcassets in Resources */,
