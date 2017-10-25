@@ -43,13 +43,31 @@
 
 - (IBAction)loginBtnTap:(id)sender {
     // TODO: login indentifier
+    NSString *user = [NSString stringWithFormat:@"root"];
+    NSString *pwd = [NSString stringWithFormat:@"000000"];
+    if ( [user isEqualToString:self.username.text] && [pwd isEqualToString:self.password.text] ) {
+        //get StoryBoard
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        //get target ViewController
+        ViewController *vc = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"main"];
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:vc animated:YES completion:nil];
+    }else{
+        //create alert controller object
+        UIAlertController* loginFailed = [UIAlertController alertControllerWithTitle:@"登录失败"
+                                                                              message:@"用户名或密码错误！"
+                                                                       preferredStyle:UIAlertControllerStyleAlert];
+        //define alert action
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action){}];
+        [loginFailed addAction:defaultAction];
+        //present alert
+        [self presentViewController:loginFailed animated:YES completion:nil];
+        
+    }
     
-    //get StoryBoard
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    //get target ViewController
-    ViewController *vc = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"main"];
-    vc.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:vc animated:YES completion:nil];
+
     
 }
 
