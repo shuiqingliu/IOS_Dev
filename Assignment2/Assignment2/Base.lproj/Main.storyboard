@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dc8-H9-aSW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,67 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="d8y-uW-fkY">
+            <objects>
+                <viewController storyboardIdentifier="first" id="Dc8-H9-aSW" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8RZ-xe-JXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51V-fr-XYQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Hol-yN-GH0"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-bn-NAe">
+                                <rect key="frame" x="250" y="64" width="125" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hmf-dG-OFM"/>
+                                    <constraint firstAttribute="width" constant="125" id="ZOg-4C-0VX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSk-p6-UMG">
+                                <rect key="frame" x="125" y="65" width="125" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UiT-dz-hO5"/>
+                                    <constraint firstAttribute="width" constant="125" id="sh2-Ns-tFT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akB-kS-BAc">
+                                <rect key="frame" x="0.0" y="64" width="125" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="FYn-LC-gxM"/>
+                                    <constraint firstAttribute="height" constant="40" id="czc-gL-6PZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f3A-bn-NAe" firstAttribute="top" secondItem="51V-fr-XYQ" secondAttribute="bottom" id="2KC-pa-EvN"/>
+                            <constraint firstItem="51V-fr-XYQ" firstAttribute="centerX" secondItem="oSk-p6-UMG" secondAttribute="centerX" id="9br-qU-hlu"/>
+                            <constraint firstItem="51V-fr-XYQ" firstAttribute="leading" secondItem="akB-kS-BAc" secondAttribute="leading" id="EaA-oh-2gN"/>
+                            <constraint firstItem="akB-kS-BAc" firstAttribute="top" secondItem="51V-fr-XYQ" secondAttribute="bottom" id="F0m-vL-PN9"/>
+                            <constraint firstItem="51V-fr-XYQ" firstAttribute="top" secondItem="bPb-7t-W0X" secondAttribute="top" id="PHF-4w-Xd8"/>
+                            <constraint firstItem="oSk-p6-UMG" firstAttribute="top" secondItem="51V-fr-XYQ" secondAttribute="bottom" constant="1" id="UXu-WM-1nv"/>
+                            <constraint firstAttribute="trailing" secondItem="51V-fr-XYQ" secondAttribute="trailing" id="kVp-AT-6VL"/>
+                            <constraint firstItem="51V-fr-XYQ" firstAttribute="leading" secondItem="8RZ-xe-JXZ" secondAttribute="leading" id="r4n-ga-Lh4"/>
+                            <constraint firstItem="51V-fr-XYQ" firstAttribute="trailing" secondItem="f3A-bn-NAe" secondAttribute="trailing" id="rlf-DZ-QH9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bPb-7t-W0X"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" id="7tG-Rj-fIS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nh-KP-THV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="29.23538230884558"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,13 +79,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-qV-J2X">
-                                <rect key="frame" x="67" y="114" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="M6H-hO-yff"/>
-                                    <constraint firstAttribute="width" constant="240" id="ymG-4m-Vdr"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-ej-LT9">
                                 <rect key="frame" x="138" y="281" width="221" height="35"/>
                                 <constraints>
@@ -45,27 +99,81 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-qV-J2X">
+                                <rect key="frame" x="113" y="107" width="148" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="M6H-hO-yff"/>
+                                    <constraint firstAttribute="width" constant="148" id="ymG-4m-Vdr"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lD9-mG-SLn" appends="YES" id="YGM-nV-fMo"/>
+                                    <outletCollection property="gestureRecognizers" destination="xXe-3A-esn" appends="YES" id="ETk-HA-wbx"/>
+                                    <outletCollection property="gestureRecognizers" destination="d1n-oe-tbI" appends="YES" id="RnL-eQ-jDi"/>
+                                    <outletCollection property="gestureRecognizers" destination="MZ4-A5-UVH" appends="YES" id="Wvl-y9-gjn"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="5WK-kO-j50" firstAttribute="top" secondItem="8L1-qV-J2X" secondAttribute="bottom" constant="39" id="8Qv-Bf-b2i"/>
+                            <constraint firstItem="5WK-kO-j50" firstAttribute="top" secondItem="8L1-qV-J2X" secondAttribute="bottom" constant="45" id="8Qv-Bf-b2i"/>
                             <constraint firstItem="5WK-kO-j50" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="M7e-6I-VEx"/>
-                            <constraint firstItem="8L1-qV-J2X" firstAttribute="leading" secondItem="5WK-kO-j50" secondAttribute="trailing" constant="-63" id="UhA-XF-Dgs"/>
+                            <constraint firstItem="8L1-qV-J2X" firstAttribute="leading" secondItem="5WK-kO-j50" secondAttribute="trailing" constant="-17" id="UhA-XF-Dgs"/>
                             <constraint firstItem="8L1-qV-J2X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z4q-JW-PVr"/>
-                            <constraint firstItem="8L1-qV-J2X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="aHr-xs-yZU"/>
-                            <constraint firstItem="bI4-ej-LT9" firstAttribute="top" secondItem="8L1-qV-J2X" secondAttribute="bottom" constant="39" id="bHj-oX-WHK"/>
+                            <constraint firstItem="8L1-qV-J2X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="aHr-xs-yZU"/>
+                            <constraint firstItem="bI4-ej-LT9" firstAttribute="top" secondItem="8L1-qV-J2X" secondAttribute="bottom" constant="45" id="bHj-oX-WHK"/>
                             <constraint firstItem="bI4-ej-LT9" firstAttribute="leading" secondItem="5WK-kO-j50" secondAttribute="trailing" constant="8" id="dFf-7A-u7B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bI4-ej-LT9" secondAttribute="trailing" constant="16" id="pFe-Aa-nP7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pt3-As-cWw"/>
                     <connections>
+                        <outlet property="TapGesture" destination="d1n-oe-tbI" id="wT5-Kx-mGP"/>
+                        <outlet property="longPress" destination="J5h-tM-LeI" id="sZ2-Zy-TRZ"/>
+                        <outlet property="monkey" destination="8L1-qV-J2X" id="RNo-a7-K6i"/>
+                        <outlet property="panGesture" destination="lD9-mG-SLn" id="TAh-bh-0QK"/>
+                        <outlet property="pinchGesture" destination="MZ4-A5-UVH" id="mD7-hO-JZR"/>
+                        <outlet property="rotaionGesture" destination="xXe-3A-esn" id="3JR-gM-GVe"/>
                         <outlet property="statusLab" destination="bI4-ej-LT9" id="kJk-5z-dGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="d1n-oe-tbI">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="9kR-GD-bGm"/>
+                        <outlet property="delegate" destination="8L1-qV-J2X" id="kKK-Do-oaR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="MZ4-A5-UVH">
+                    <connections>
+                        <action selector="pinchGesture:" destination="BYZ-38-t0r" id="vLv-Av-XLb"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="Yom-Rv-vpQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="xXe-3A-esn">
+                    <connections>
+                        <action selector="Rotaion:" destination="BYZ-38-t0r" id="689-BP-BjS"/>
+                        <outlet property="delegate" destination="8L1-qV-J2X" id="eNz-oQ-IWb"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lD9-mG-SLn">
+                    <connections>
+                        <action selector="panGesture:" destination="BYZ-38-t0r" id="Vfn-5N-ynk"/>
+                        <outlet property="delegate" destination="8L1-qV-J2X" id="CbC-Uu-GEG"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="J5h-tM-LeI">
+                    <connections>
+                        <action selector="longGesture:" destination="BYZ-38-t0r" id="Hwy-fd-7iP"/>
+                        <outlet property="delegate" destination="8L1-qV-J2X" id="G9y-pk-MiM"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="monkey" width="168" height="168"/>
+    </resources>
 </document>
