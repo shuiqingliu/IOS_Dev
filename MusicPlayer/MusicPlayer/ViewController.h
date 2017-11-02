@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  Assignment2
+//  MusicPlayer
 //
-//  Created by qingliu on 10/21/17.
+//  Created by qingliu on 11/2/17.
 //  Copyright © 2017 qingliu. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController
 
-@property CGPoint *point;
 
 @end
 
