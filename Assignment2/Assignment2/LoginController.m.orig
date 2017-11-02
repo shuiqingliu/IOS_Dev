@@ -67,6 +67,16 @@
         
     }
     
+<<<<<<< HEAD
+    //get StoryBoard
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //get target ViewController
+    ViewController *vc = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"first"];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:nil];
+=======
+
+>>>>>>> 5d137b2bc3577da0565588af76badfc17385449f
     
 }
 
