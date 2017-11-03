@@ -71,7 +71,7 @@
     //prepare and decode
     [self.player prepareToPlay];
     //set player paraments
-    self.player.numberOfLoops = 1;
+    self.player.numberOfLoops = 0;
     self.player.volume = 0.5;
     
     //update progress with timer
