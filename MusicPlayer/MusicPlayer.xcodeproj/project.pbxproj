@@ -15,6 +15,7 @@
 		839303AA1FAB5DE900235ECB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 839303A91FAB5DE900235ECB /* main.m */; };
 		839303B41FAB5DE900235ECB /* MusicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 839303B31FAB5DE900235ECB /* MusicPlayerTests.m */; };
 		839303BF1FAB5DE900235ECB /* MusicPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 839303BE1FAB5DE900235ECB /* MusicPlayerUITests.m */; };
+		839303CD1FAB72B000235ECB /* now.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 839303CC1FAB72B000235ECB /* now.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		839303BA1FAB5DE900235ECB /* MusicPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839303BE1FAB5DE900235ECB /* MusicPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerUITests.m; sourceTree = "<group>"; };
 		839303C01FAB5DE900235ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839303CC1FAB72B000235ECB /* now.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = now.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		839303991FAB5DE900235ECB /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				839344811FAC0B0C00A24CBF /* resource */,
 				8393039A1FAB5DE900235ECB /* AppDelegate.h */,
 				8393039B1FAB5DE900235ECB /* AppDelegate.m */,
 				8393039D1FAB5DE900235ECB /* ViewController.h */,
@@ -130,6 +133,14 @@
 				839303C01FAB5DE900235ECB /* Info.plist */,
 			);
 			path = MusicPlayerUITests;
+			sourceTree = "<group>";
+		};
+		839344811FAC0B0C00A24CBF /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				839303CC1FAB72B000235ECB /* now.mp3 */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 				839303A71FAB5DE900235ECB /* LaunchScreen.storyboard in Resources */,
 				839303A41FAB5DE900235ECB /* Assets.xcassets in Resources */,
 				839303A21FAB5DE900235ECB /* Main.storyboard in Resources */,
+				839303CD1FAB72B000235ECB /* now.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
