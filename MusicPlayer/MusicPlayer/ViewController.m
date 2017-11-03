@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *muteBtn;
 @property (weak, nonatomic) IBOutlet UILabel *currentTime;
 @property (weak, nonatomic) IBOutlet UILabel *playDuration;
-@property (weak, nonatomic) IBOutlet UISlider *volume;
+@property (weak, nonatomic) IBOutlet UISlider *musicProgress;
 
 @property  AVAudioPlayer *player;
 @property NSTimer *timer;
@@ -51,12 +51,12 @@
     self.currentTime.text = @"0.00";
     //set current progress to zero;
     self.player.currentTime = 0;
-    self.volume.value = 0;
+    self.musicProgress.value = 0;
     //stop timer
     [self.timer invalidate];
 }
 - (IBAction)volumeControl:(id)sender {
-    self.player.currentTime = self.volume.value * self.player.duration;
+    self.player.currentTime = self.musicProgress.value * self.player.duration;
 }
 
 //create music player
@@ -83,7 +83,7 @@
 }
 
 - (void)updateTime{
-    self.volume.value = self.player.currentTime/self.player.duration;
+    self.musicProgress.value = self.player.currentTime/self.player.duration;
     self.currentTime.text = [NSString stringWithFormat:@"%.2f",self.player.currentTime/60];
 }
 
