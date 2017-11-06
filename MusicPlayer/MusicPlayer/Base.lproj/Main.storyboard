@@ -69,7 +69,7 @@
                                     <constraint firstAttribute="height" constant="29" id="17w-qg-lZ7"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="volumeControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="g39-nT-pEL"/>
+                                    <action selector="musicControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="ocB-uJ-vP0"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-K5-c4v">
@@ -98,11 +98,11 @@
                     </view>
                     <connections>
                         <outlet property="currentTime" destination="0dS-K5-c4v" id="bH1-C6-hN2"/>
+                        <outlet property="musicProgress" destination="Zzv-VR-6SD" id="Ck3-Ug-cKA"/>
                         <outlet property="muteBtn" destination="qqz-ZS-yVK" id="gva-gx-TsN"/>
                         <outlet property="pauseBtn" destination="csF-4R-AVg" id="2NT-yL-T11"/>
                         <outlet property="playBtn" destination="FIF-hS-ykn" id="8Ls-3n-U9B"/>
                         <outlet property="playDuration" destination="9SU-fb-w7C" id="jBh-2K-cxr"/>
-                        <outlet property="volume" destination="Zzv-VR-6SD" id="z4E-8U-fBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

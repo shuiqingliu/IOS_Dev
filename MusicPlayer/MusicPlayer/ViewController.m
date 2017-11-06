@@ -55,7 +55,8 @@
     //stop timer
     [self.timer invalidate];
 }
-- (IBAction)volumeControl:(id)sender {
+
+- (IBAction)musicControl:(id)sender {
     self.player.currentTime = self.musicProgress.value * self.player.duration;
 }
 
