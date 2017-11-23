@@ -11,6 +11,7 @@ To Learn IOS Development,this project start by the coursera of `Foundations of O
 - [x] CalculateDistance (Use DGDistanceRequest lib to calculate the distance between the two place s)  
 - [x] Assignment (try to use base UIKit,customize ViewController )
 - [x] OC-study (base grammar practise of Objective-C)  
+- [x] TwitterShare (A demo of TwitterKit API)
 
 
 # Keep move everyday.
