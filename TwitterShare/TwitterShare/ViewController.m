@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Social/Social.h>
+#import <TwitterKit/TwitterKit.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *tweetTextView;
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configTweetTextView];
+    
 }
 
 - (void)showAlertMessage:(NSString *) alertmessage{
@@ -48,12 +50,7 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
     UIAlertAction *tweetAction = [UIAlertAction actionWithTitle:@"Tweet" style:UIAlertActionStyleDefault handler:
                                   ^(UIAlertAction *action){
-                                      if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-                                          //Tweet it
-                                      }
-                                      else{
-                                          [self showAlertMessage:@"Please sign in to twitter before you tweet"];
-                                      }
+                                      [self sendTwitter:self.tweetTextView.text];
                                   } ];
     
     //add action to alter controller
@@ -65,6 +62,36 @@
     [self presentViewController:shareAlert animated:YES completion:nil];
 }
 
+//send twitter,init composer
+- (void)sendTwitter:(NSString *) twitterContent{
+    if ([[Twitter sharedInstance].sessionStore hasLoggedInUsers]) {
+        TWTRComposer *composer = [[TWTRComposer alloc]init];
+        if ([twitterContent length] < 140) {
+            [composer setText:twitterContent];
+        }
+        else{
+            NSString *cutedString = [twitterContent substringToIndex:140];
+            [composer setText:cutedString];
+        }
+        
+        [composer showFromViewController:self completion:^(TWTRComposerResult result) {
+            if (result == TWTRComposerResultCancelled) {
+                NSLog(@"cacelled");
+            }
+            else{
+                NSLog(@"sended");
+            }
+        }];
+    }
+    else{
+        UIAlertController *noUserAlert = [UIAlertController alertControllerWithTitle:@"TwitterUserCheckError"
+                                                                             message:@"You must login before tweet"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+        [noUserAlert addAction:cancelAction];  
+        [self presentViewController:noUserAlert animated:YES completion:nil];
+    }
+}
 
 - (void)configTweetTextView{
     self.tweetTextView.layer.backgroundColor = [UIColor colorWithRed:1.0
