@@ -68,7 +68,14 @@
         [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
             if (session) {
                 TWTRComposerViewController *composer = [TWTRComposerViewController emptyComposer];
-                [composer initWithInitialText:[self.tweetTextView.text substringToIndex:140] image:nil videoURL:nil];
+                NSString *tweetContent;
+                if ([self.tweetTextView.text length] < 140) {
+                    tweetContent = self.tweetTextView.text;
+                }
+                else{
+                    tweetContent = [self.tweetTextView.text substringToIndex:140];
+                }
+                [composer initWithInitialText:tweetContent image:nil videoURL:nil];
                 [self presentViewController:composer animated:YES completion:nil];
             } else {
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Twitter Accounts Available" message:@"You must log in before presenting a composer." preferredStyle:UIAlertControllerStyleAlert];
