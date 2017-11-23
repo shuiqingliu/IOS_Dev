@@ -6,8 +6,7 @@ target 'TwitterShare' do
   # use_frameworks!
 
   # Pods for TwitterShare
-  pod  'TwitterKit'
-
+  pod 'TwitterKit', '~> 3.0'
   target 'TwitterShareTests' do
     inherit! :search_paths
     # Pods for testing

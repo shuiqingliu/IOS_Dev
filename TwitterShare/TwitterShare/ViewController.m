@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *tweetTextView;
 
 - (void)configTweetTextView;
-
 @end
 
 @implementation ViewController
@@ -41,25 +40,7 @@
         [self.tweetTextView resignFirstResponder];
     }
     
-    //create Alter Controller
-    UIAlertController *shareAlert = [UIAlertController alertControllerWithTitle:@"Test Alert"
-                                                                       message:@"TweetShareAlter"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-    
-    //add action
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
-    UIAlertAction *tweetAction = [UIAlertAction actionWithTitle:@"Tweet" style:UIAlertActionStyleDefault handler:
-                                  ^(UIAlertAction *action){
-                                      [self sendTwitter:self.tweetTextView.text];
-                                  } ];
-    
-    //add action to alter controller
-    
-    [shareAlert addAction:tweetAction];
-    [shareAlert addAction:cancelAction];
-    
-    //Show alter controller
-    [self presentViewController:shareAlert animated:YES completion:nil];
+    [self sendTwitter:self.tweetTextView.text];
 }
 
 //send twitter,init composer
@@ -84,12 +65,16 @@
         }];
     }
     else{
-        UIAlertController *noUserAlert = [UIAlertController alertControllerWithTitle:@"TwitterUserCheckError"
-                                                                             message:@"You must login before tweet"
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
-        [noUserAlert addAction:cancelAction];  
-        [self presentViewController:noUserAlert animated:YES completion:nil];
+        [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
+            if (session) {
+                TWTRComposerViewController *composer = [TWTRComposerViewController emptyComposer];
+                [composer initWithInitialText:[self.tweetTextView.text substringToIndex:140] image:nil videoURL:nil];
+                [self presentViewController:composer animated:YES completion:nil];
+            } else {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Twitter Accounts Available" message:@"You must log in before presenting a composer." preferredStyle:UIAlertControllerStyleAlert];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }];
     }
 }
 
