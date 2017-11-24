@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  TwitterShare
+//  InstagramDemo
 //
-//  Created by qingliu on 11/22/17.
+//  Created by qingliu on 11/24/17.
 //  Copyright © 2017 qingliu. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <TwitterKit/TwitterKit.h>
 
 @interface AppDelegate ()
 
@@ -15,13 +14,9 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
-    return [[Twitter sharedInstance] application:app openURL:url options:options];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[Twitter sharedInstance]startWithConsumerKey:@"a2UxAygqtzp7StBSniEHLFunb" consumerSecret:@"0VVdJcoNYwEfCij2QzLTMXb9qCQyjZem59VbUjUOYpAab9K5H3"];
     return YES;
 }
 

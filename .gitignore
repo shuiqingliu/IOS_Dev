@@ -1,3 +1,5 @@
 DerivedData/
 qingliu.xcuserdatad/
 .DS_Store
+TwitterShare/TwitterShare/Info.plist
+TwitterShare/TwitterShare/AppDelegate.m
