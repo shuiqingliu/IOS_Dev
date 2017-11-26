@@ -7,12 +7,28 @@
 //
 
 #import "ViewController.h"
+#import <NXOAuth2.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIButton *logoutBtn;
+@property (weak, nonatomic) IBOutlet UIButton *refreshBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *displayImage;
 
 @end
 
 @implementation ViewController
+
+- (IBAction)loginAction:(id)sender {
+    [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:@"Instagram"];
+}
+
+- (IBAction)logoutAction:(id)sender {
+}
+
+- (IBAction)refreshAction:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

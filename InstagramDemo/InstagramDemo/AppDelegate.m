@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <NXOAuth2.h>
 
 @interface AppDelegate ()
 
@@ -16,10 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"e71147ece12343a790513135f2bbebf6"
+                                             secret:@"42487c0685474e25866f6852e836c14d"
+                                   authorizationURL:[NSURL URLWithString:@"https://api.instagram.com/oauth/authorize"]
+                                           tokenURL:[NSURL URLWithString:@"https://api.instagram.com/oauth/access_token"]
+                                        redirectURL:[NSURL URLWithString:@"http://localhost"]
+                                     forAccountType:@"Instagram"];
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    NSLog(@"we recived call back");
+    return [[NXOAuth2AccountStore sharedStore] handleRedirectURL:url];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
