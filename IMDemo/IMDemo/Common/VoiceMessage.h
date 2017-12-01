@@ -11,7 +11,7 @@
 
 @interface VoiceMessage : NSObject
 
-@property (nonatomic,weak) AVAudioRecorder *recorder;
+@property (nonatomic,strong) AVAudioRecorder *recorder;
 @property (nonatomic,copy) NSString *fileName;
 @property (nonatomic,copy) NSURL *recordURL;
 
