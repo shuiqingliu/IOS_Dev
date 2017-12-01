@@ -9,14 +9,33 @@
 #import "VoiceMessage.h"
 #import <AVFoundation/AVFoundation.h>
 
+@interface VoiceMessage()
+
+@property (nonatomic,strong) AVAudioRecorder *recorder;
+@property (nonatomic,strong) NSString *soundPath;
+
+@end
+
 @implementation VoiceMessage
+
+#pragma mark - Instance
+
++ (instancetype)shareInstance{
+    static VoiceMessage *sharedInstance = nil;
+    static dispatch_once_t dispatchOnce;
+    dispatch_once(&dispatchOnce,^{
+        if (sharedInstance == nil) {
+            sharedInstance = [[VoiceMessage alloc] init];
+        }
+    });
+    return sharedInstance;
+}
 
 
 
 #pragma mark - Getters
 
-- (NSDictionary *)recordingSettings
-{
+- (NSDictionary *)recordingSettings{
     NSMutableDictionary *recordSetting =[NSMutableDictionary dictionaryWithCapacity:10];
     [recordSetting setObject:[NSNumber numberWithInt: kAudioFormatLinearPCM] forKey: AVFormatIDKey];
     //2 采样率
@@ -28,8 +47,13 @@
     return recordSetting;
 }
 
+- (NSString*)soundFilePath{
+    return self.soundPath;
+}
 
-- (void)recordMessage:(AVAudioRecorder *)recorder recordURL:(NSURL *)recordURL{
+#pragma mark - voice method
+- (void)recordMessage:(NSString *)filePath{
+    self.soundPath = filePath;
     //Create AVAudioSession object
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *error = nil;
@@ -44,12 +68,20 @@
             return;
         }
     }
-    
+    //set file path and file name
+    NSString *fileName = [NSString stringWithFormat:@"/voice-test.caf"];
+    self.soundPath = [self.soundPath stringByAppendingPathComponent:fileName];
+    NSURL *recordURL = [NSURL fileURLWithPath:self.soundPath];
     //initial AVAudioRecorder
-    recorder = [[AVAudioRecorder alloc] initWithURL:recordURL settings:[self recordingSettings] error:&error];
+    _recorder = [[AVAudioRecorder alloc] initWithURL:recordURL settings:[self recordingSettings] error:&error];
+    [_recorder prepareToRecord];
+    [self.recorder setMeteringEnabled:YES];
+    [self.recorder record];
     
-    //set record source
+}
 
+- (void)stopRecord:(UIView *)view{
+    [self.recorder stop];
 }
 
 - (void)playMessage:(NSURL *)playURL{

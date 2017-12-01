@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 @interface VoiceMessage : NSObject
 
-@property (nonatomic,strong) AVAudioRecorder *recorder;
-@property (nonatomic,copy) NSString *fileName;
+@property (nonatomic,copy) NSString *soundFilePath;
 @property (nonatomic,copy) NSURL *recordURL;
 
-- (void)recordMessage:(AVAudioRecorder *)recorder recordURL:(NSURL *)recordURL;
++ (instancetype)shareInstance;
+
+- (void)recordMessage:(NSString *)recordURL;
 - (void)playMessage:(NSURL *)playURL;
+- (void)stopRecord:(UIView *)view;
+
 @end

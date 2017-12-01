@@ -6,7 +6,6 @@ target 'IMDemo' do
   # use_frameworks!
 
   # Pods for IMDemo
-  pod 'NIMKit/Lite'
 
   target 'IMDemoTests' do
     inherit! :search_paths

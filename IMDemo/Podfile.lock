@@ -1,31 +1,3 @@
-PODS:
-  - M80AttributedLabel (1.6.3)
-  - NIMKit/Core (2.1.1):
-    - M80AttributedLabel (~> 1.6.3)
-    - SDWebImage (~> 4.0.0)
-    - Toast (~> 3.0)
-    - TZImagePickerController (~> 1.9.0)
-  - NIMKit/Lite (2.1.1):
-    - NIMKit/Core
-    - NIMSDK_LITE (~> 4.4.0)
-  - NIMSDK_LITE (4.4.0)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
-  - Toast (3.1.0)
-  - TZImagePickerController (1.9.5)
-
-DEPENDENCIES:
-  - NIMKit/Lite
-
-SPEC CHECKSUMS:
-  M80AttributedLabel: d06543195d3e451d2ea62ad76d04aa9cea7661d4
-  NIMKit: f3100811ad44abdc585ad7bf06d67bac0afc07db
-  NIMSDK_LITE: 8ca6e4de3d3a6a93a317b59414893026c81a36d0
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
-  TZImagePickerController: 3f735f4ad5ca6a292a762216d404f9d7a83adad4
-
-PODFILE CHECKSUM: 69832e2e45948cc0c5866336fd2500827e7e78a5
+PODFILE CHECKSUM: b61724b0ba367e7154c836bb0998191415d8def8
 
 COCOAPODS: 1.3.1
